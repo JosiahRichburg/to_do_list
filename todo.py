@@ -12,9 +12,11 @@ def view_tasks():
     for i, task in enumerate (tasks, start=1):
         print(f"{i}. {task}")
 # Step 4: Delete a task
-
-
+def delete_task(task):
+    task = tasks.pop(task)
+    print("deleted: ", task) 
 # Step 5: Mark task complete
+
 
 
 # Step 6: Save/load tasks (extra stretch for today)
@@ -26,5 +28,7 @@ if __name__ == "__main__":
     add_task("Push code to GitHub")
     view_tasks()
     #mark_complete(0)
+    delete_task(0)
     view_tasks()
     #save_tasks()
+    
